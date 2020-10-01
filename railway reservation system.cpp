@@ -2,10 +2,11 @@
 #include<conio.h>
 #include<stdlib.h>
 #include<string.h>
-#include<iostream>
+#include<iostream.h>
 #include<time.h>
 #include<iomanip>
 #include<fstream.h>
+using namescape std
 char f[10]="f";
 char s[10]="s";
 int addr,ad,flag,f1,d,m,i,amt;
@@ -13,21 +14,21 @@ float tamt;
 class login
 {
 public:
-    char id[100];
-    char pass[100];
+    char id[30];
+    char pass[30];
     char *password;
     void getid()
     {
-        cout<<"Enter your id:";
+        cout<<"Enter your id: ";
         gets(id);
-        password=getpass("Enter the password:");
+        password=getpass("Enter the password: ");
         strcpy(pass,password);
     }
     void displayid()
     {
-        cout<<"Id:";
+        cout<<"Id: ";
         puts(id);
-        cout<<"Password:";
+        cout<<"Password: ";
         puts(pass);
     }
 };
@@ -44,20 +45,20 @@ public:
     int d,m,y;
     void getdetail()
     {
-        cout<<"Enter the details as follows\n";
-        cout<<"Train no:";
+        cout<<"Enter the details as follows"<<endl;
+        cout<<"Train no: ";
         cin>>tno;
-        cout<<"Train name:";
+        cout<<"Train name: ";
         gets(tname);
-        cout<<"Boarding point:";
+        cout<<"Boarding point: ";
         gets(bp);
-        cout<<"Destination pt:";
+        cout<<"Destination pt: ";
         gets(dest);
-        cout<<"No of seats in first class & fare per ticket:";
+        cout<<"No of seats in first class & fare per ticket: ";
         cin>>c1>>c1fare;
-        cout<<"No of seats in second class & fare per ticket:";
+        cout<<"No of seats in second class & fare per ticket: ";
         cin>>c2>>c2fare;
-        cout<<"Date of travel:";
+        cout<<"Date of travel: ";
         cin>>d>>m>>y;
     }
     void displaydetail()
@@ -87,25 +88,25 @@ public:
     float amc;
     void getresdet()
     {
-        cout<<"Enter the details as follows\n";
-        cout<<"Train no:";
+        cout<<"Enter the details as follows"<<endl;
+        cout<<"Train no: ";
         cin>>tno;
-        cout<<"Train name:";
+        cout<<"Train name: ";
         gets(tname);
-        cout<<"Boarding point:";
+        cout<<"Boarding point: ";
         gets(bp);
-        cout<<"Destination pt:";
+        cout<<"Destination pt: ";
         gets(dest);
-        cout<<"No of seats required:";
+        cout<<"No of seats required: ";
         cin>>nosr;
         for(i=0; i<nosr ; i++)
         {
-            cout<<"Passenger name:";
+            cout<<"Passenger name: ";
             gets(pname[i]);
             cout<<"Passenger age:";
             cin>>age[i];
         }
-        cout<<"Enter the class f-first class s-second class:";
+        cout<<"Enter the class f-first class s-second class: ";
         gets(clas);
         cout<<"Date of travel:";
         cin>>d>>m>>y;
@@ -535,7 +536,7 @@ void cancell()
                         else
                         {
                             cout<<"Cancelling after the departure\n";
-                            cout<<"Your request cannot be completed\n";
+                            cout<<"Your request cannot be completed    \n";
                         }
                         goto h;
                         c.displaycancdet();
@@ -720,6 +721,6 @@ void manage()
             break;
         }
     }
-    while(ch<=3);
+    while(ch<4);
     getch();
 }
